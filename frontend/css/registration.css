@@ -1,0 +1,116 @@
+body {
+    background-color: #E3F0AF;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration-body {
+    background-color: whitesmoke;
+    border-radius: 3px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.registration-headings {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-heading {
+    font-size: 1.3em;
+    
+}
+
+.org-reg {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.org-reg a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: #185519;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+}
+
+form div {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.column-1 div,
+.column-2 div,
+.column-3 div,
+.column-4 div,
+.column-5 div {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-1 input,
+.column-2 input,
+.column-3 input,
+.column-4 input,
+.column-5 input {
+    width: 250px;
+    height: 25px;
+    border: none;
+    border-radius: 1px;
+}
+
+.button-section {
+    display: flex;
+    align-items: center;
+}
+
+.button-section button {
+    width: 135px;
+    height: 35px;
+    border-radius: 1px;
+    background-color: #185519;
+    color: #FFDE00;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+}
+
+.button-section button:hover {
+    background-color: #FFDE00;
+    color: #185519;
+    
+}
+
+.button-section span {
+    font-weight: bold;
+}
+
+.button-section span a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: #185519;
+    font-weight: bold;
+}
