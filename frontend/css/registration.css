@@ -1,5 +1,10 @@
 body {
     background-color: #E3F0AF;
+    background-image: url(../assets/login-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .wrapper {
     display: flex;
@@ -91,16 +96,18 @@ form div {
     width: 135px;
     height: 35px;
     border-radius: 1px;
-    background-color: #185519;
-    color: #FFDE00;
+    background-color:#59c7f6;
+    color: #0A3981;
     font-weight: bolder;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
 }
 
 .button-section button:hover {
-    background-color: #FFDE00;
-    color: #185519;
+    background-color:#0A3981;
+    color: #59c7f6;
     
 }
 
