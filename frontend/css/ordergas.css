@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Barlow;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.cylinders {
+    display: flex;
+    padding: 30px;
+    margin-top: 60px;
+    background-color: #D4F6FF;
+    border-radius: 1px;
+}
+
+.cylinders ul {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+
+    list-style: none;
+}
+.priducts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.gas-image {
+    width: 300px;
+    height: 300px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    background-color: #FBFBFB;
+    border-radius: 1px;
+}
+
+.btn {
+    padding: 20px 30px;
+    border: 1px solid black;
+    border-radius: 1px;
+    text-decoration: none;
+    color: #0A3981;
+    background-color: #BFECFF;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.btn:hover {
+    background-color: #0A3981;
+    color: #BFECFF;
+}
+
+.nav {
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.order-logo {
+    font-size: 2em;
+}
+
+.home a {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 1px;
+    color: #0A3981;
+    background-color: #BFECFF;
+    font-weight: 500;    
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.home a:hover {
+    background-color: #0A3981;
+    color: #BFECFF;
+}
