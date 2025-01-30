@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Barlow;
+}
+
+body {
+    background-image: url(../assets/login-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.login-form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 400px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    align-items: center;
+    gap: 30px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.username .password {
+    display: flex;
+    align-items: center;
+}
+
+.username input, .password input {
+    padding: 4px;
+    width: 210px;
+    border: 1px solid silver;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.f-password {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.login-button {
+    padding: 10px 100px;
+    border: 1px solid black;
+    border-radius: 1px;
+    color: #0A3981;
+    background-color: #BFECFF;
+    font-weight: 500;    
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #0A3981;
+    color: #BFECFF;
+}
+
+.hr {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.line {
+    width: 150px;
+    height: 1px;
+    background-color: silver;
+}
+
+.reg-nav {
+    display: flex;
+    gap: 4px;
+}
+.reg-nav a {
+    text-decoration: none;
+    color: #0A3981;
+    font-weight: 600;
+}
