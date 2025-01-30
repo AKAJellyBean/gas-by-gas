@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Barlow;
+    background-color: whitesmoke;
+    background-image: url(../assets/Home-banner-1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    padding: 20px;
+    
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.nav-list {
+    display: flex;
+    gap: 50px;
+    list-style: none;   
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+}
+
+.account a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.hero {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    color: silver;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+    font-size: 1.8rem;
+    color: silver;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    padding:80px ;
+}
+
+.status-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.status-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    ;
+}
+
+.status-item p {
+    font-size: 1.7rem;
+    color: silver;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    gap: 100px;
+}
+
+.buttons-wrapper .buttons a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    border: 1px solid white;
+    border-radius: 1px;
+    background-color: rgb(115, 188, 230);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.buttons-wrapper .buttons a:hover {
+    transform: scale(1.1);
+    background-color: white;
+    color: rgb(152, 212, 247);
+}
+
