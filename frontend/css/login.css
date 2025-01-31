@@ -40,31 +40,32 @@ body {
     
 }
 
-.username .password {
+.email, .password {
     display: flex;
     align-items: center;
 }
 
-.username input, .password input {
-    padding: 4px;
-    width: 210px;
+.email input, .password input {
+    padding: 20px;
+    width: 300px;
     border: 1px solid silver;
     border-radius: 3px;
-    text-align: center;
+    
 }
 
 .f-password {
     text-decoration: none;
     color: black;
     font-weight: 500;
+    
 }
 
 .login-button {
-    padding: 10px 100px;
+    padding: 20px 125px;
     border: 1px solid black;
     border-radius: 1px;
-    color: #0A3981;
-    background-color: #BFECFF;
+    color: white;
+    background-color: #0A3981;
     font-weight: 500;    
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -82,6 +83,7 @@ body {
     align-items: center;
     text-align: center;
     gap: 5px;
+    
 }
 
 .line {

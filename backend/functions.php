@@ -25,4 +25,26 @@ function addUser($first_name, $last_name, $email, $phone, $nic, $street_address,
 
     return $stmt->execute();
 }
+
+// function for fetch user info for user login
+function getUserInfoForLogin($email, $password) {
+    global $conn;
+    $query = 'SELECT * FROM "user" WHERE email=:email';
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam(':email', $email);
+    $stmt->execute();
+
+    // fetch user data
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if($user && password_verify($password, $user['password'])) {
+        return $user;
+    } else {
+        return false;
+    }
+
+}
+
+
+
 ?>
