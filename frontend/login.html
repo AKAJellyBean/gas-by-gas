@@ -8,18 +8,17 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="login.php" class="login-form" method="post">
+        <form action="../backend/log_process.php" class="login-form" method="post">
             <h1>Welcome Back!</h1>
             <p>Login here</p>
 
-            <div class="username">
-                <label for="username">Username:</label>
-                <input type="text" name="username" placeholder="johndoe">
+            <div class="email">
+                
+                <input type="text" name="email" placeholder="Email" required>
             </div>
 
-            <div class="username">
-                <label for="Password">Usernmae:</label>
-                <input type="Password" name="Password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;">
+            <div class="password">
+                <input type="password" name="password" placeholder="Password" required>
             </div>
             <a href="#" class="f-password">Forgot Password?</a>
             <button type="submit" class="login-button">Login</button>
