@@ -121,3 +121,18 @@ form div {
     color: #185519;
     font-weight: bold;
 }
+
+.error-messages {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid red;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: #721c24;
+    font-size: 0.9em;
+    margin: 5px 0;
+}

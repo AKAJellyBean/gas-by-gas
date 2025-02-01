@@ -22,13 +22,20 @@
                 </div>
 
                 <div class="home">
+
+                    <a href="index.php">Back to Home</a>
+
                     <a href="index.html">Back to Home</a>
+
                 </div>
             </nav>
         </header>
         <section class="order-portal">
             <form action="../backend/order_process.php" method="post" class="order-form">
                 <!-- handle the guest user requests -->
+
+            
+
                 <?php
                     if(!isset($_SESSION['user_name'])) {
                         echo '<input type="text" name="first_name" placeholder="First Name">';
@@ -37,6 +44,7 @@
                         echo '<input type="nic" name="nic" placeholder="NIC">';
                     }
                 ?>
+
                 <select name="outlet" class="outlet">
                     <option value="select" disabled selected>Select Outlet</option>
                     <?php
@@ -56,8 +64,11 @@
                         }
                     ?>
 
+
+
                     
                 
+
                 </select>
 
                 <input type="text" name="quantity" placeholder="Quantity">
