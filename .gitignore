@@ -1,0 +1,25 @@
+# Ignore .env files
+.env
+
+# Ignore Composer dependencies
+backend/vendor/
+
+# Ignore log files
+*.log
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore compiled files
+*.class
+*.pyc
+*.o
+*.out
+
+# Ignore node_modules if using Node.js
+node_modules/

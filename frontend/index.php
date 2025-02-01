@@ -21,7 +21,7 @@
                 <ul class="nav-list">
                     <li><a href="about.html">Who We Are</a></li>
                     <li><a href="whatwedo.html">What we Do</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
                 </ul>
                 <div class="account">
                     <!-- <a href="login.php">Login</a> -->
