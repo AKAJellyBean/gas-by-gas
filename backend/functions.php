@@ -103,4 +103,22 @@
 
     }
 
+    // function for insert gues request into the database
+    function insertGuestRequest($first_name, $last_name, $phone, $nic, $outlet_id, $token, $status, $pickup_date, $created_at) {
+        global $conn;
+        $query = 'INSERT INTO "guest_request" (first_name, last_name, phone, nic, outlet_id, token,status,pickup_date,created_at) VALUES (:first_name, :last_name, :phone, :nic, :outlet_id, :token, :status, :pickup_date, :created_at)';
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':first_name', $first_name);
+        $stmt->bindParam(':last_name', $last_name);
+        $stmt->bindParam(':phone', $phone);
+        $stmt->bindParam(':nic', $nic);
+        $stmt->bindParam(':outlet_id', $outlet_id);
+        $stmt->bindParam(':token', $token);
+        $stmt->bindParam(':status', $status);
+        $stmt->bindParam(':pickup_date', $pickup_date);
+        $stmt->bindParam(':created_at', $created_at);
+        return $stmt->execute();
+
+    }
+
 ?>

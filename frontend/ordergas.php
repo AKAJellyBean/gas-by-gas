@@ -28,6 +28,15 @@
         </header>
         <section class="order-portal">
             <form action="../backend/order_process.php" method="post" class="order-form">
+                <!-- handle the guest user requests -->
+                <?php
+                    if(!isset($_SESSION['user_name'])) {
+                        echo '<input type="text" name="first_name" placeholder="First Name">';
+                        echo '<input type="text" name="last_name" placeholder="Last Name">';
+                        echo '<input type="phone" name="phone" placeholder="Phone">';
+                        echo '<input type="nic" name="nic" placeholder="NIC">';
+                    }
+                ?>
                 <select name="outlet" class="outlet">
                     <option value="select" disabled selected>Select Outlet</option>
                     <?php
