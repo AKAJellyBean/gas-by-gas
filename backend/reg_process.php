@@ -66,28 +66,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Check if NIC or email already exists in the database
-    // get user id
-    
     if (userExists($nic)) {
         $errors[] = "User with this NIC already exists.";
     }
-
 
     // If there are errors, store them in the session and redirect back to the registration page
     if (!empty($errors)) {
         $_SESSION['errors'] = $errors;
         header('Location: ../frontend/registration.php');
         exit();
-    }
-
-    // Proceed with registration if no errors
-    if (addUser($first_name, $last_name, $email, $phone, $nic, $street_address, $city, $province, $password)) {
-        echo "Registration Successful!";
-        header("Location: ../frontend/login.html");
-        exit();
     } else {
-        // if registration failed
-        echo "Error: Registration Failed!";
+        // Proceed with registration if no errors
+        if (addUser($first_name, $last_name, $email, $phone, $nic, $street_address, $city, $province, $password)) {
+            $_SESSION['success'] = "Registration Successful!";
+            header("Location: ../frontend/login.php");
+            exit();
+        } else {
+            // if registration failed
+            echo "Error: Registration Failed!";
+        }
     }
 }
 ?>

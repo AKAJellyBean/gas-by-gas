@@ -1,7 +1,7 @@
 <?php
     session_start();
     include '../backend/functions.php';
-    echo '<pre>'; print_r($_SESSION); echo '</pre>';
+    
 
 ?>
 
@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="home">
-                    <a href="index.php">Back to Home</a>
+                    <a href="../index.php">Back to Home</a>
                 </div>
             </nav>
         </header>

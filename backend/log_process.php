@@ -1,23 +1,28 @@
 <?php
-    session_start();
-    
-    require 'functions.php';
+session_start();
 
-    
+$error = [];
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+require 'functions.php';
 
-        $user = getUserInfoForLogin($email, $password);
+if (isset($_SESSION['success'])) {
+    echo "<p style='color:green; text-align: center; padding: 10px;'>" . $_SESSION['success'] . "</p>";
+    unset($_SESSION['success']);
+}
 
-        if($user) {
-            $_SESSION['user_id'] = $user['user_id'];
-            header('Location: ../frontend/index.php');
-            exit();
-        } else {
-            echo "<p style=color:red;>Invalid email or password</p>";
-        }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $user = getUserInfoForLogin($email, $password);
+
+    if ($user) {
+        $_SESSION['user_id'] = $user['user_id'];
+        header('Location: ../index.php');
+        exit();
+    } else {
+        $error[] = "Invalid email or password";
+        $_SESSION['errors'] = $error;
     }
-        
+}
 ?>

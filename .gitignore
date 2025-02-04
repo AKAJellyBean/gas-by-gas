@@ -1,8 +1,17 @@
 # Ignore .env files
 .env
 
+
 # Ignore Composer dependencies
 backend/vendor/
+admin/vendor/
+backend/composer.json
+backend/composer.lock
+
+
+node_modules/
+package-lock.json
+package.json
 
 # Ignore log files
 *.log
