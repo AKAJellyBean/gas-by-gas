@@ -2,7 +2,11 @@
     
     require 'config.php';
 
+    
+
+
     include 'validator.php';
+
     
 
     // Function to insert user into the database
@@ -157,9 +161,9 @@
     }
 
     // function for insert request into the database
-    function insertRequest($user_id, $outlet_id, $token, $status, $pickup_date, $created_at, $quantity) {
+    function insertRequest($user_id, $outlet_id, $token, $status, $pickup_date, $created_at, $quantity, $gas_id) {
         global $conn;
-        $query = 'INSERT INTO "request" (user_id, outlet_id, token,status,pickup_date,created_at, quantity) VALUES (:user_id, :outlet_id, :token, :status, :pickup_date, :created_at, :quantity)';
+        $query = 'INSERT INTO "request" (user_id, outlet_id, token,status,pickup_date,created_at, quantity, gas_id) VALUES (:user_id, :outlet_id, :token, :status, :pickup_date, :created_at, :quantity, :gas_id)';
         $stmt = $conn->prepare($query);
         $stmt->bindParam(':user_id', $user_id);
         $stmt->bindParam(':outlet_id', $outlet_id);
@@ -168,6 +172,7 @@
         $stmt->bindParam(':pickup_date', $pickup_date);
         $stmt->bindParam(':created_at', $created_at);
         $stmt->bindParam(':quantity', $quantity);
+        $stmt->bindParam(':gas_id', $gas_id);
         return $stmt->execute();
 
     }
@@ -213,6 +218,16 @@
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // function to get gas request by id
+    function getRequestById($request_id) {
+        global $conn;
+        $query = 'SELECT * FROM "request" WHERE request_id=:request_id';
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':request_id', $request_id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     function getApprovedUserGasData() {
         global $conn;
         $query = 'SELECT * FROM "request" WHERE status = :status';
@@ -249,6 +264,21 @@
         $stmt->execute();
         $count = $stmt->fetchColumn();
         return $count > 0;
+    }
+
+    // get phone number with country code
+    function getPhoneNumber($phone) {
+        return "+94" . substr($phone, 1);
+    }
+
+    // get stock data usign outlet id
+    function getStockData($outlet_id) {
+        global $conn;
+        $query = 'SELECT * FROM "stock" WHERE outlet_id=:outlet_id';
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':outlet_id', $outlet_id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
 

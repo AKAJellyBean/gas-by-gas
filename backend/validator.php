@@ -1,19 +1,18 @@
 <?php
-function validateName($first_name) {
-    return preg_match("/^[a-zA-Z-' ]*$/", $first_name);
+function validateName($name) {
+    return preg_match("/^[a-zA-Z ]+$/", $name) === 1;
 }
 
-
 function validateEmail($email) {
-    return filter_var($email, FILTER_VALIDATE_EMAIL);
+    return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
 }
 
 function validatePhone($phone) {
-    return preg_match("/^[0-9]{10}$/", $phone);
+    return preg_match("/^07[0-9]{8}$/", $phone) === 1;
 }
 
 function validateNIC($nic) {
-    return preg_match("/^[0-9]{9}[vVxX]$/", $nic);
+    return preg_match("/^[0-9]{9}[vV]$|^[0-9]{12}$/", $nic) === 1;
 }
 
 function validateStreetAddress($street_address) {
@@ -21,7 +20,7 @@ function validateStreetAddress($street_address) {
 }
 
 function validateCity($city) {
-    return preg_match("/^[a-zA-Z-' ]*$/", $city);
+    return preg_match("/^[a-zA-Z ]+$/", $city) === 1;
 }
 
 function validateProvince($province) {
@@ -30,6 +29,6 @@ function validateProvince($province) {
 }
 
 function validatePassword($password) {
-    return strlen($password) >= 8;
+    return strlen($password) >= 8 && preg_match("/[0-9]/", $password) === 1;
 }
 ?>

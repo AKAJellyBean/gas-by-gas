@@ -73,7 +73,7 @@
 
             try {
                 
-                insertRequest($user_id, $outlet_id, $token, "pending", $pickup_date, $created_at, $quantity);
+                insertRequest($user_id, $outlet_id, $token, "pending", $pickup_date, $created_at, $quantity, $gas_type);
             } catch (Exception $e) {
                 // handle the error
                 $error[] = $e->getMessage();
@@ -88,7 +88,7 @@
                 $phone = $user['phone'];
 
                 // add country code to the phone number
-                $phone = "+94" . substr($phone, 1);
+                $phone = getPhoneNumber($phone);
 
                 $message = "GasByGas: Mr/Mrs. {$_SESSION['user_name']}, Your gas request has been received. We'll notify you when it's ready for pickup.";
                 sendSms($phone, $message);

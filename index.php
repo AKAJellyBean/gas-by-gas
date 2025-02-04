@@ -1,5 +1,5 @@
 <?php
-    require '../backend/log_process.php';
+    require 'backend/log_process.php';
 ?>
 
 
@@ -9,19 +9,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gas by Gas-Home</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="frontend/css/index.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
             <nav class="nav">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/gbg-logo-removebg-preview.png" alt="Logo"></a>
+                    <a href="index.php"><img src="frontend/assets/gbg-logo-removebg-preview.png" alt="Logo"></a>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="about.html">Who We Are</a></li>
-                    <li><a href="whatwedo.html">What we Do</a></li>
-                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="frontend/about.html">Who We Are</a></li>
+                    <li><a href="frontend/whatwedo.html">What we Do</a></li>
+                    <li><a href="frontend/contact.php">Contact Us</a></li>
                 </ul>
                 <div class="account">
                     <!-- <a href="login.php">Login</a> -->
@@ -29,9 +29,9 @@
                     <?php
                         
                         if(isset($_SESSION['user_name'])) {
-                            echo "<a href='profile.php'>{$_SESSION['user_name']}</a>";
+                            echo "<a href='frontend/profile.php'>{$_SESSION['user_name']}</a>";
                         } else {
-                            echo "<a href='login.php'>Login</a>";
+                            echo "<a href='frontend/login.php'>Login</a>";
                         }
                     ?>
                 </div>
@@ -68,15 +68,15 @@
 
                 <div class="buttons-wrapper">
                     <div class="buttons">
-                        <a href="">Price List</a>
+                        <a href="frontend/pricelist.php">Price List</a>
                     </div>
 
                     <div class="buttons">
-                        <a href="">Outlet Locations</a>
+                        <a href="frontend/outlet.php">Outlet Locations</a>
                     </div>
 
                     <div class="buttons">
-                        <a href="ordergas.php">Online Order</a>
+                        <a href="frontend/ordergas.php">Online Order</a>
                     </div>
                 </div>
             </div>

@@ -20,7 +20,7 @@ if (empty($host) || empty($dbname) || empty($user) || empty($password)) {
 try {
     $conn = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connection successful";
+    // echo "Connection successful";
 } catch (PDOException $e) {
     die("Database Connection failed: {$e->getMessage()}");
 }

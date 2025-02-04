@@ -12,8 +12,17 @@
             <h1>Welcome Back!</h1>
             <p>Login here</p>
 
+            <?php
+            session_start();
+            if (isset($_SESSION['errors'])) {
+                foreach ($_SESSION['errors'] as $error) {
+                    echo "<p style='color:red; text-align: center; padding: 10px;'>$error</p>";
+                }
+                unset($_SESSION['errors']);
+            }
+            ?>
+
             <div class="email">
-                
                 <input type="text" name="email" placeholder="Email" required>
             </div>
 
@@ -21,7 +30,7 @@
                 <input type="password" name="password" placeholder="Password" required>
             </div>
             <a href="#" class="f-password">Forgot Password?</a>
-            <button type="submit" class="login-button">Login</button>
+            <button type="submit" class="login-button" href="login.php">Login</button>
 
             <div class="hr">
                 <div class="line"></div>

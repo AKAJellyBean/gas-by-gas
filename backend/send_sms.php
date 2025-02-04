@@ -11,7 +11,7 @@
     function sendSms($to, $message) {
         $sid = $_ENV['TWILIO_ACCOUNT_SID'];
         $token = $_ENV['TWILIO_AUTH_TOKEN'];
-        $twilio_number = $_ENV['TWILIO_PHONE_NUMBER'];
+        $twilio_number = $_ENV['TWILIO_NUMBER'];
 
         try {
             $client = new Client($sid, $token);
@@ -26,5 +26,10 @@
             error_log("SMS sending failed: " . $e->getMessage());
             return false;
         }
+
+
     }
+
+    // Send SMS
+    sendSms("+94701266207", "Dear customer, your gas order has been successfully placed. Thank you for choosing us.");
 ?>
