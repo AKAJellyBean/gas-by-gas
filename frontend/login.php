@@ -40,7 +40,11 @@
             
             <div class="reg-nav">
                 <p>Don't have an account?</p>
+
                 <a href="registration.php">Register here</a>
+
+                <a href="registration.html">Register here</a>
+
             </div>
             
         </form>
